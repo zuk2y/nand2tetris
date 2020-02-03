@@ -43,4 +43,44 @@ CHIP ALU {
 
     PARTS:
    // Put you code here:
+   Not(in=zx, out=notzx);
+   And16(a=x, b[0..15]=notzx, out=zxx);
+
+   Xor(a=zxx[0], b=nx, out=nxx[0]);
+   Xor(a=zxx[1], b=nx, out=nxx[1]);
+   Xor(a=zxx[2], b=nx, out=nxx[2]);
+   Xor(a=zxx[3], b=nx, out=nxx[3]);
+   Xor(a=zxx[4], b=nx, out=nxx[4]);
+   Xor(a=zxx[5], b=nx, out=nxx[5]);
+   Xor(a=zxx[6], b=nx, out=nxx[6]);
+   Xor(a=zxx[7], b=nx, out=nxx[7]);
+   Xor(a=zxx[8], b=nx, out=nxx[8]);
+   Xor(a=zxx[9], b=nx, out=nxx[9]);
+   Xor(a=zxx[10], b=nx, out=nxx[10]);
+   Xor(a=zxx[11], b=nx, out=nxx[11]);
+   Xor(a=zxx[12], b=nx, out=nxx[12]);
+   Xor(a=zxx[15], b=nx, out=nxx[15]);
+   Xor(a=zxx[13], b=nx, out=nxx[13]);
+   Xor(a=zxx[14], b=nx, out=nxx[14]);
+   
+   Not(in=zy, out=notzy);
+   And16(a=y, b[0..15]=notzy, out=zyy);
+
+   Xor(a=zyy[0], b=ny, out=nyy[0]);
+   Xor(a=zyy[1], b=ny, out=nyy[1]);
+   Xor(a=zyy[2], b=ny, out=nyy[2]);
+   Xor(a=zyy[3], b=ny, out=nyy[3]);
+   Xor(a=zyy[4], b=ny, out=nyy[4]);
+   Xor(a=zyy[5], b=ny, out=nyy[5]);
+   Xor(a=zyy[6], b=ny, out=nyy[6]);
+   Xor(a=zyy[7], b=ny, out=nyy[7]);
+   Xor(a=zyy[8], b=ny, out=nyy[8]);
+   Xor(a=zyy[9], b=ny, out=nyy[9]);
+   Xor(a=zyy[10], b=ny, out=nyy[10]);
+   Xor(a=zyy[11], b=ny, out=nyy[11]);
+   Xor(a=zyy[12], b=ny, out=nyy[12]);
+   Xor(a=zyy[15], b=ny, out=nyy[15]);
+   Xor(a=zyy[13], b=ny, out=nyy[13]);
+   Xor(a=zyy[14], b=ny, out=nyy[14]);
+   
 }
