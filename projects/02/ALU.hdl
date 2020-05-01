@@ -43,44 +43,80 @@ CHIP ALU {
 
     PARTS:
    // Put you code here:
-   Not(in=zx, out=notzx);
-   And16(a=x, b[0..15]=notzx, out=zxx);
 
-   Xor(a=zxx[0], b=nx, out=nxx[0]);
-   Xor(a=zxx[1], b=nx, out=nxx[1]);
-   Xor(a=zxx[2], b=nx, out=nxx[2]);
-   Xor(a=zxx[3], b=nx, out=nxx[3]);
-   Xor(a=zxx[4], b=nx, out=nxx[4]);
-   Xor(a=zxx[5], b=nx, out=nxx[5]);
-   Xor(a=zxx[6], b=nx, out=nxx[6]);
-   Xor(a=zxx[7], b=nx, out=nxx[7]);
-   Xor(a=zxx[8], b=nx, out=nxx[8]);
-   Xor(a=zxx[9], b=nx, out=nxx[9]);
-   Xor(a=zxx[10], b=nx, out=nxx[10]);
-   Xor(a=zxx[11], b=nx, out=nxx[11]);
-   Xor(a=zxx[12], b=nx, out=nxx[12]);
-   Xor(a=zxx[15], b=nx, out=nxx[15]);
-   Xor(a=zxx[13], b=nx, out=nxx[13]);
-   Xor(a=zxx[14], b=nx, out=nxx[14]);
+   Not(in=zx, out=notzx);
+   And16(a=x, b[0]=notzx, b[1]=notzx, b[2]=notzx, b[3]=notzx, b[4]=notzx, b[5]=notzx, b[6]=notzx, b[7]=notzx, b[8]=notzx, b[9]=notzx, b[10]=notzx, b[11]=notzx, b[12]=notzx, b[13]=notzx, b[14]=notzx, b[15]=notzx, out[0]=zxx0,  out[1]=zxx1, out[2]=zxx2, out[3]=zxx3, out[4]=zxx4, out[5]=zxx5, out[6]=zxx6, out[7]=zxx7, out[8]=zxx8, out[9]=zxx9, out[10]=zxx10, out[11]=zxx11, out[12]=zxx12, out[13]=zxx13, out[14]=zxx14, out[15]=zxx15);
+
+   Xor(a=zxx0, b=nx, out=nxx0);
+   Xor(a=zxx1, b=nx, out=nxx1);
+   Xor(a=zxx2, b=nx, out=nxx2);
+   Xor(a=zxx3, b=nx, out=nxx3);
+   Xor(a=zxx4, b=nx, out=nxx4);
+   Xor(a=zxx5, b=nx, out=nxx5);
+   Xor(a=zxx6, b=nx, out=nxx6);
+   Xor(a=zxx7, b=nx, out=nxx7);
+   Xor(a=zxx8, b=nx, out=nxx8);
+   Xor(a=zxx9, b=nx, out=nxx9);
+   Xor(a=zxx10, b=nx, out=nxx10);
+   Xor(a=zxx11, b=nx, out=nxx11);
+   Xor(a=zxx12, b=nx, out=nxx12);
+   Xor(a=zxx13, b=nx, out=nxx13);
+   Xor(a=zxx14, b=nx, out=nxx14);
+   Xor(a=zxx15, b=nx, out=nxx15);
    
    Not(in=zy, out=notzy);
-   And16(a=y, b[0..15]=notzy, out=zyy);
+   And16(a=y, b[0]=notzy, b[1]=notzy, b[2]=notzy, b[3]=notzy, b[4]=notzy, b[5]=notzy, b[6]=notzy, b[7]=notzy, b[8]=notzy, b[9]=notzy, b[10]=notzy, b[11]=notzy, b[12]=notzy, b[13]=notzy, b[14]=notzy, b[15]=notzy, out[0]=zyy0,  out[1]=zyy1, out[2]=zyy2, out[3]=zyy3, out[4]=zyy4, out[5]=zyy5, out[6]=zyy6, out[7]=zyy7, out[8]=zyy8, out[9]=zyy9, out[10]=zyy10, out[11]=zyy11, out[12]=zyy12, out[13]=zyy13, out[14]=zyy14, out[15]=zyy15);
 
-   Xor(a=zyy[0], b=ny, out=nyy[0]);
-   Xor(a=zyy[1], b=ny, out=nyy[1]);
-   Xor(a=zyy[2], b=ny, out=nyy[2]);
-   Xor(a=zyy[3], b=ny, out=nyy[3]);
-   Xor(a=zyy[4], b=ny, out=nyy[4]);
-   Xor(a=zyy[5], b=ny, out=nyy[5]);
-   Xor(a=zyy[6], b=ny, out=nyy[6]);
-   Xor(a=zyy[7], b=ny, out=nyy[7]);
-   Xor(a=zyy[8], b=ny, out=nyy[8]);
-   Xor(a=zyy[9], b=ny, out=nyy[9]);
-   Xor(a=zyy[10], b=ny, out=nyy[10]);
-   Xor(a=zyy[11], b=ny, out=nyy[11]);
-   Xor(a=zyy[12], b=ny, out=nyy[12]);
-   Xor(a=zyy[15], b=ny, out=nyy[15]);
-   Xor(a=zyy[13], b=ny, out=nyy[13]);
-   Xor(a=zyy[14], b=ny, out=nyy[14]);
-   
+   Xor(a=zyy0, b=ny, out=nyy0);
+   Xor(a=zyy1, b=ny, out=nyy1);
+   Xor(a=zyy2, b=ny, out=nyy2);
+   Xor(a=zyy3, b=ny, out=nyy3);
+   Xor(a=zyy4, b=ny, out=nyy4);
+   Xor(a=zyy5, b=ny, out=nyy5);
+   Xor(a=zyy6, b=ny, out=nyy6);
+   Xor(a=zyy7, b=ny, out=nyy7);
+   Xor(a=zyy8, b=ny, out=nyy8);
+   Xor(a=zyy9, b=ny, out=nyy9);
+   Xor(a=zyy10, b=ny, out=nyy10);
+   Xor(a=zyy11, b=ny, out=nyy11);
+   Xor(a=zyy12, b=ny, out=nyy12);
+   Xor(a=zyy13, b=ny, out=nyy13);
+   Xor(a=zyy14, b=ny, out=nyy14);
+   Xor(a=zyy15, b=ny, out=nyy15);
+
+   Add16(a[0]=nxx0, a[1]=nxx1, a[2]=nxx2, a[3]=nxx3, a[4]=nxx4, a[5]=nxx5, a[6]=nxx6, a[7]=nxx7, a[8]=nxx8, a[9]=nxx9, a[10]=nxx10, a[11]=nxx11, a[12]=nxx12, a[13]=nxx13, a[14]=nxx14, a[15]=nxx15, b[0]=nyy0, b[1]=nyy1, b[2]=nyy2, b[3]=nyy3, b[4]=nyy4, b[5]=nyy5, b[6]=nyy6, b[7]=nyy7, b[8]=nyy8, b[9]=nyy9, b[10]=nyy10, b[11]=nyy11, b[12]=nyy12, b[13]=nyy13, b[14]=nyy14, b[15]=nyy15, out[0]=add0, out[1]=add1, out[2]=add2, out[3]=add3, out[4]=add4, out[5]=add5, out[6]=add6, out[7]=add7, out[8]=add8, out[9]=add9, out[10]=add10,  out[11]=add11, out[12]=add12, out[13]=add13, out[14]=add14, out[15]=add15);
+   And16(a[0]=add0, a[1]=add1, a[2]=add2, a[3]=add3, a[4]=add4, a[5]=add5, a[6]=add6, a[7]=add7, a[8]=add8, a[9]=add9, a[10]=add10, a[11]=add11, a[12]=add12, a[13]=add13, a[14]=add14, a[15]=add15, b[0]=f, b[1]=f, b[2]=f, b[3]=f, b[4]=f, b[5]=f, b[6]=f, b[7]=f, b[8]=f, b[9]=f, b[10]=f, b[11]=f, b[12]=f, b[13]=f, b[14]=f, b[15]=f, out[0]=addf0, out[1]=addf1, out[2]=addf2, out[3]=addf3, out[4]=addf4, out[5]=addf5, out[6]=addf6, out[7]=addf7, out[8]=addf8, out[9]=addf9, out[10]=addf10, out[11]=addf11, out[12]=addf12, out[13]=addf13, out[14]=addf14, out[15]=addf15);
+
+   And16(a[0]=nxx0, a[1]=nxx1, a[2]=nxx2, a[3]=nxx3, a[4]=nxx4, a[5]=nxx5, a[6]=nxx6, a[7]=nxx7, a[8]=nxx8, a[9]=nxx9, a[10]=nxx10, a[11]=nxx11, a[12]=nxx12, a[13]=nxx13, a[14]=nxx14, a[15]=nxx15, b[0]=nyy0, b[1]=nyy1, b[2]=nyy2, b[3]=nyy3, b[4]=nyy4, b[5]=nyy5, b[6]=nyy6, b[7]=nyy7, b[8]=nyy8, b[9]=nyy9, b[10]=nyy10, b[11]=nyy11, b[12]=nyy12, b[13]=nyy13, b[14]=nyy14, b[15]=nyy15, out[0]=and0, out[1]=and1, out[2]=and2, out[3]=and3, out[4]=and4, out[5]=and5, out[6]=and6, out[7]=and7, out[8]=and8, out[9]=and9, out[10]=and10,  out[11]=and11, out[12]=and12, out[13]=and13, out[14]=and14, out[15]=and15);
+   Not(in=f, out=notf);   
+   And16(a[0]=and0, a[1]=and1, a[2]=and2, a[3]=and3, a[4]=and4, a[5]=and5, a[6]=and6, a[7]=and7, a[8]=and8, a[9]=and9, a[10]=and10, a[11]=and11, a[12]=and12, a[13]=and13, a[14]=and14, a[15]=and15, b[0]=notf, b[1]=notf, b[2]=notf, b[3]=notf, b[4]=notf, b[5]=notf, b[6]=notf, b[7]=notf, b[8]=notf, b[9]=notf, b[10]=notf, b[11]=notf, b[12]=notf, b[13]=notf, b[14]=notf, b[15]=notf, out[0]=andf0, out[1]=andf1, out[2]=andf2, out[3]=andf3, out[4]=andf4, out[5]=andf5, out[6]=andf6, out[7]=andf7, out[8]=andf8, out[9]=andf9, out[10]=andf10, out[11]=andf11, out[12]=andf12, out[13]=andf13, out[14]=andf14, out[15]=andf15);
+
+   Or16(a[0]=addf0, a[1]=addf1, a[2]=addf2, a[3]=addf3, a[4]=addf4, a[5]=addf5, a[6]=addf6, a[7]=addf7, a[8]=addf8, a[9]=addf9, a[10]=addf10, a[11]=addf11, a[12]=addf12, a[13]=addf13, a[14]=addf14, a[15]=addf15, b[0]=andf0, b[1]=andf1, b[2]=andf2, b[3]=andf3, b[4]=andf4, b[5]=andf5, b[6]=andf6, b[7]=andf7, b[8]=andf8, b[9]=andf9, b[10]=andf10, b[11]=andf11, b[12]=andf12, b[13]=andf13, b[14]=andf14, b[15]=andf15, out[0]=f0, out[1]=f1, out[2]=f2, out[3]=f3, out[4]=f4, out[5]=f5, out[6]=f6, out[7]=f7, out[8]=f8, out[9]=f9, out[10]=f10, out[11]=f11, out[12]=f12, out[13]=f13, out[14]=f14, out[15]=f15);
+
+   Xor(a=f0, b=no, out=out0);
+   Xor(a=f1, b=no, out=out1);
+   Xor(a=f2, b=no, out=out2);
+   Xor(a=f3, b=no, out=out3);
+   Xor(a=f4, b=no, out=out4);
+   Xor(a=f5, b=no, out=out5);
+   Xor(a=f6, b=no, out=out6);
+   Xor(a=f7, b=no, out=out7);
+   Xor(a=f8, b=no, out=out8);
+   Xor(a=f9, b=no, out=out9);
+   Xor(a=f10, b=no, out=out10);
+   Xor(a=f11, b=no, out=out11);
+   Xor(a=f12, b=no, out=out12);
+   Xor(a=f13, b=no, out=out13);
+   Xor(a=f14, b=no, out=out14);
+   Xor(a=f15, b=no, out=out15);
+
+   Or8Way(in[0]=out0, in[1]=out1, in[2]=out2, in[3]=out3, in[4]=out4, in[5]=out5, in[6]=out6, in[7]=out7, out=zr07);
+   Or8Way(in[0]=out8, in[1]=out9, in[2]=out10, in[3]=out11, in[4]=out12, in[5]=out13, in[6]=out14, in[7]=out15, out=zr815);
+   Or(a=zr07, b=zr815, out=notzr);
+   Not(in=notzr, out=zr);
+
+   And(a=true, b=out15, out=ng);
+
+   And16(a[0]=out0, a[1]=out1, a[2]=out2, a[3]=out3, a[4]=out4, a[5]=out5, a[6]=out6, a[7]=out7, a[8]=out8, a[9]=out9, a[10]=out10, a[11]=out11, a[12]=out12, a[13]=out13, a[14]=out14, a[15]=out15, b[0]=true, b[1]=true, b[2]=true, b[3]=true, b[4]=true, b[5]=true, b[6]=true, b[7]=true, b[8]=true, b[9]=true, b[10]=true, b[11]=true, b[12]=true, b[13]=true, b[14]=true, b[15]=true, out=out);
+
 }
