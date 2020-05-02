@@ -16,5 +16,11 @@ CHIP PC {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    Inc16(in=outReg, out=outInc);
+    Or(a=reset, b=load, out=zy);
+    Not(in=load, out=notLoad);
+    Or(a=reset, b=notLoad, out=zx);
+    ALU(x=in, y=outInc, f=true, zx=zx, zy=zy, out=inReg);
+    Or(a=zy, b=inc, out=loadReg);
+    Register(in=inReg, load=loadReg, out=out, out=outReg);
 }
