@@ -59,17 +59,29 @@ public class Parser {
 
     public String comp() {
         String[] split = currentCommand.split("[=,;]");
-        return split[0];
+        if (split[0].isEmpty()) {
+            return "null";
+        } else {
+            return split[0];
+        }
     }
 
     public String dest() {
         String[] split = currentCommand.split("[=,;]");
-        return split[1];
+        if (split[1].isEmpty()) {
+            return "null";
+        } else {
+            return split[1];
+        }
     }
 
     public String jump() {
         String[] split = currentCommand.split("[=,;]");
-        return split[2];
+        if (split[2].isEmpty()) {
+            return "null";
+        } else {
+            return split[2];
+        }
     }
 
     public enum CommandType{
