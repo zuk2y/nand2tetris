@@ -14,9 +14,13 @@ public class Parser {
 
     private String nextCommand;
 
-    public Parser(Path inputFile) throws IOException {
+    public Parser(Path inputFile) {
         try (Stream<String> stream = Files.lines(inputFile)) {
-            commands = stream.map(i -> i.replaceAll(" ", "")).map(i -> i.replaceAll("//.*$", "")).filter(i -> !(i.isBlank())).collect(Collectors.toList());
+            commands = stream
+                .map(i -> i.replaceAll(" ", "")) // remove space
+                .map(i -> i.replaceAll("//.*$", "")) // remove comment
+                .filter(i -> !(i.isBlank())) // remove blank lines
+                .collect(Collectors.toList());
         }
         catch (IOException e) {
             System.out.println("An error occurred.");
@@ -51,7 +55,9 @@ public class Parser {
             return CommandType.A_COMMAND;
         } else if(Pattern.matches("^\\([a-zA-Z0-9_.$:]+\\)$", currentCommand)) {
             return CommandType.L_COMMAND;
-        } else if(Pattern.matches("^[AMD]+=[AMD10+\\-!&|]+;[JGTEQGLNMP]+$", currentCommand) || Pattern.matches("^[AMD]+=[AMD10+\\-!&|]+$", currentCommand) || Pattern.matches("[AMD10+\\-!&|]+;[JGTEQGLNMP]+$", currentCommand)){
+        } else if(Pattern.matches("^[AMD]+=[AMD10+\\-!&|]+;[JGTEQGLNMP]+$", currentCommand) || 
+            Pattern.matches("^[AMD]+=[AMD10+\\-!&|]+$", currentCommand) || 
+            Pattern.matches("[AMD10+\\-!&|]+;[JGTEQGLNMP]+$", currentCommand)){
             return CommandType.C_COMMAND;
         } else {
             throw new IllegalArgumentException("command format is invalid: [" + currentCommand + "]");
