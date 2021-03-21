@@ -55,8 +55,8 @@ public class Parser {
             return CommandType.A_COMMAND;
         } else if(Pattern.matches("^\\([a-zA-Z0-9_.$:]+\\)$", currentCommand)) {
             return CommandType.L_COMMAND;
-        } else if(Pattern.matches("^[AMD]+=[AMD10+\\-!&|]+;[JGTEQGLNMP]+$", currentCommand) || 
-            Pattern.matches("^[AMD]+=[AMD10+\\-!&|]+$", currentCommand) || 
+        } else if(Pattern.matches("^[AMD]+=[AMD10+\\-!&|]+;[JGTEQGLNMP]+$", currentCommand) ||
+            Pattern.matches("^[AMD]+=[AMD10+\\-!&|]+$", currentCommand) ||
             Pattern.matches("[AMD10+\\-!&|]+;[JGTEQGLNMP]+$", currentCommand)){
             return CommandType.C_COMMAND;
         } else {
