@@ -34,6 +34,8 @@ public class Code {
         compTable.put("-A", "0110011");
         compTable.put("D+1", "0011111");
         compTable.put("A+1", "0110111");
+        compTable.put("D-1", "0001110");
+        compTable.put("A-1", "0110010");
         compTable.put("D+A", "0000010");
         compTable.put("D-A", "0010011");
         compTable.put("A-D", "0000111");
