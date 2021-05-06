@@ -68,7 +68,7 @@ public class Parser {
         if (commandType() == CommandType.A_COMMAND) {
             return currentCommand.substring(1);
         } else {
-            return currentCommand.substring(1, currentCommand.length());
+            return currentCommand.substring(1, currentCommand.length() - 1);
         }
     }
 
